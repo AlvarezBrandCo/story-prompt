@@ -2,8 +2,9 @@
 # Instructions
 
 - To run main application:
-     1. 'npm install'
-     2. 'npm run start'
+     1. clone repo locally
+     2. 'npm install'
+     3. 'npm run start'
 - To run stats application:
      1. 'npm run stats'
 
