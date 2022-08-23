@@ -20,9 +20,12 @@ const validator = (type, answer) => {
   else if (type === inputs.MEASUREMENT.title) {
     // measurements validation requires that the user input be one of the predefined options
     return measurementOptions.includes(answer) ? true : false
-  } else  {
-    // all other inputs have a less-than-50-character limit
+  } else if (type === inputs.LOCATION.title) {
     return answer.length < 50 ? true : false
+  } else {
+    // all other inputs have a less-than-50-character limit
+    const noNumAndLessThanFifty = answer.length < 50 && /^([^0-9]*)$/.test(answer)
+    return noNumAndLessThanFifty ? true : false
   }
 }
 
@@ -61,7 +64,7 @@ const inputs = {
   ADJECTIVE: {
     title: "adjective",
     promptText: "\n\nEnter an adjective (something fun, but less than 50 characters): ",
-    errorText: "Whoops! Adjective must be between 1 and 50 characters in length.  Try again...",
+    errorText: "Whoops! Adjective must be between 1 and 50 characters (but no numbers) in length.  Try again...",
     errorLimitFn: () => {
       const defaultAdjective = "frictionless"
       log(orange(`Maybe let's say... '${defaultAdjective}'\n`))
@@ -71,7 +74,7 @@ const inputs = {
   NOUN: {
     title: "noun",
     promptText: "\n\nEnter an noun (something even more fun, same character limit): ",
-    errorText: "Whoops! Noun must be between 1 and 50 characters in length.  Try again...",
+    errorText: "Whoops! Noun must be between 1 and 50 characters (but no numbers) in length.  Try again...",
     errorLimitFn: () => {
       const defaultNoun = "aardvark"
       log(orange(`Uh oh - Let's try '${defaultNoun}'\n`))
