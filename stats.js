@@ -44,7 +44,7 @@ const sendStats = async () => {
     }
   }).filter(num => !isNaN(num))
   
-  const maxDistance = convertDistancesToMiles.length > 0 ? Math.max(...convertDistancesToMiles) : "no info"
+  const maxDistance = Math.max(...convertDistancesToMiles)
   const minDistance = Math.min(...convertDistancesToMiles)
   const avgDistance = convertDistancesToMiles.reduce((accum, curr) => {
     return accum += curr
