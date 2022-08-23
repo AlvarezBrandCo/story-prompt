@@ -1,6 +1,8 @@
 
-#Instructions to To start CL application: 'npm start'
-To run stats application: 'npm run stats'
+#Instructions
+
+- To run main application: 'npm run start'
+- To run stats application: 'npm run stats'
 
 -----------------------
 
