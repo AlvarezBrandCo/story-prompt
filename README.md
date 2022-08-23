@@ -1,3 +1,14 @@
+
+#Instructions to To start CL application: 'npm start'
+To run stats application: 'npm run stats'
+
+-----------------------
+
+
+
+
+
+
 ## Instructions
 
 Thanks for doing this project as part of your interview process. We appreciate your time and want to make this a fun experience. If you have any questions at all, please reach out to us and we'll get back to you.
