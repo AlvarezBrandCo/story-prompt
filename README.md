@@ -1,5 +1,5 @@
 
-#Instructions
+# Instructions
 
 - To run main application:
      1. 'npm install'
