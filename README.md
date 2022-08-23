@@ -1,8 +1,11 @@
 
 #Instructions
 
-- To run main application: 'npm run start'
-- To run stats application: 'npm run stats'
+- To run main application:
+     1. 'npm install'
+     2. 'npm run start'
+- To run stats application:
+     1. 'npm run stats'
 
 -----------------------
 
